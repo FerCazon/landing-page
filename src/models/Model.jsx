@@ -2,12 +2,12 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("holocruxe-robot.gltf")
+  const { nodes, materials } = useGLTF("/models/holocruxe-robot.gltf")
   return (
     <group {...props} dispose={null}>
       <group
-        position={[0.03, 0.44, 0.33]}
-        rotation={[1.56, 0, -Math.PI]}
+        position={[4, 0.44, 0.33]}
+        rotation={[1.56, 0, -2]}
         scale={[-0.13, 0.13, 0.13]}
       >
         <mesh
@@ -27,4 +27,4 @@ export function Model(props) {
   );
 }
 
-useGLTF.preload("/holocruxe robot.gltf");
+useGLTF.preload("/models/holocruxe-robot.gltf");
