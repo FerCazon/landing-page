@@ -3,8 +3,6 @@ import {ScrollControls, Scroll, Sparkles} from "@react-three/drei"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import { SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix } from './components';
-import audioFile from './audio/Welcome.m4a'
-import Button from 'react-bootstrap/Button';
 import {Model} from "./models/Model"
 
 

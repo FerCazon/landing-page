@@ -16,7 +16,7 @@ export function Model(props) {
       if (child instanceof Mesh) {        
         child.rotation.x = Math.PI / 2;
         child.rotation.z = Math.PI      
-        child.scale.set(0.15, 0.15, 0.15);
+        child.scale.set(-0.15, 0.15, 0.15);
       }
     });
   }, []);
