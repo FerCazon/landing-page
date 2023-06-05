@@ -13,12 +13,9 @@ export function Model(props) {
   
   useEffect(() => {
     groupRef.current.traverse((child) => {
-      if (child instanceof Mesh) {
-        // Adjust these rotation values as needed for your model.
+      if (child instanceof Mesh) {        
         child.rotation.x = Math.PI / 2;
-        child.rotation.z = Math.PI
-
-        // Adjust scale here. This makes the model half the original size.
+        child.rotation.z = Math.PI      
         child.scale.set(0.15, 0.15, 0.15);
       }
     });
@@ -26,9 +23,8 @@ export function Model(props) {
   
   useFrame(({ mouse }) => {
   if (groupRef && groupRef.current) {
-    const [x, y] = [mouse.x, mouse.y];
-    // Convert the 2D mouse position to 3D rotations and limit the range of the rotation.
-    const maxXRotation = Math.PI / 4; // adjust these values as needed
+    const [x, y] = [mouse.x, mouse.y];   
+    const maxXRotation = Math.PI / 4;
     const minXRotation = -Math.PI / 4;
     const maxYRotation = Math.PI/1
     const minYRotation = -Math.PI/4
@@ -55,7 +51,7 @@ export function Model(props) {
     position={[0,-2,0]}
     {...props} 
     dispose={null}
-    onClick={onClick} // add click event here
+    onClick={onClick}
   >
         <mesh
           castShadow

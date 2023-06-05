@@ -11,11 +11,7 @@ import {Model} from "./models/Model"
 
 
 function App() {  
-  const audio = new Audio(audioFile);
-
-  const playSound = () => {
-    audio.play();
-  };
+ 
   return (
    <>
 
@@ -43,8 +39,7 @@ function App() {
     </Scroll>
     <Scroll html style={{width:'100%', height:'100%'}}>
     <Container style={{height: '100%', position: 'relative'}}>
-  <SectionOne/>
-  <Button onClick={playSound} style={{ position: 'absolute', bottom: 0, right: 0 }}>Play Sound</Button>                             
+  <SectionOne/>               
   <SectionTwo/>
   <SectionThree/>
   <SectionFour/>
