@@ -1,14 +1,13 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useThree, useFrame } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import audioFile from '../audio/Welcome.m4a'
-import { Vector3, Mesh } from "three";
+import {  Mesh } from "three";
 import { useEffect } from "react";
 
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/models/holocruxe-robot.gltf")
-  const { viewport } = useThree();
+  const { nodes, materials } = useGLTF("/models/holocruxe-robot.gltf")  
   const groupRef = useRef();
   
   useEffect(() => {

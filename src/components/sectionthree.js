@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import imgSrc from '../photos/photo3.jpg'
+
 const SectionThree = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,

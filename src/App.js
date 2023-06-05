@@ -5,14 +5,9 @@ import Container from 'react-bootstrap/Container';
 import { SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix } from './components';
 import {Model} from "./models/Model"
 
-
-
-
-function App() {  
- 
+function App() {   
   return (
    <>
-
    <color attach="background" args={['#000000']}/>
    <ambientLight intensity={0.3} />
 <directionalLight

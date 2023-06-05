@@ -10,13 +10,13 @@ const SectionTwo = () => {
   });
 
   const variants = {
-    hidden: { x: '100vw' },
-    visible: { x: 0, transition: { duration: 2, ease: "easeInOut" } }
+    hidden: { x: '-100vw' },
+    visible: { x: 0, transition: { duration: 1, ease: "easeInOut" } }
   }
 
   const imageVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { delay: 1, duration: 1, ease: "easeInOut" } }
+    visible: { opacity: 1, transition: { delay: 1.5, duration: 1, ease: "easeInOut" } }
   }
 
   return (
