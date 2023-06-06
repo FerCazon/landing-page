@@ -22,10 +22,11 @@ export function Model(props) {
   
   useFrame(({ mouse }) => {
   if (groupRef && groupRef.current) {
-    const [x, y] = [mouse.x, mouse.y];   
+    const scaleFactor = 4;
+    const [x, y] = [mouse.x / scaleFactor, mouse.y / scaleFactor]; 
     const maxXRotation = Math.PI / 4;
     const minXRotation = -Math.PI / 4;
-    const maxYRotation = Math.PI/1
+    const maxYRotation = Math.PI/4
     const minYRotation = -Math.PI/4
     const newXRotation = Math.max(minXRotation, Math.min(maxXRotation, -y * Math.PI));
     const newYRotation = Math.max(minYRotation, Math.min(maxYRotation, x * Math.PI));
