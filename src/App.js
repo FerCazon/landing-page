@@ -3,11 +3,14 @@ import {ScrollControls, Scroll, Sparkles} from "@react-three/drei"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import { SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix } from './components';
-import {Model} from "./models/Model"
+import {Modelrc} from "./models/Modelrc"
+import { Canvas } from '@react-three/fiber';
 
 function App() {   
   return (
-   <>
+   <> 
+   
+ 
    <color attach="background" args={['#000000']}/>
    <ambientLight intensity={0.3} />
 <directionalLight
@@ -26,7 +29,7 @@ function App() {
 <pointLight position={[0, -10, 0]} intensity={1.5} />
    <ScrollControls pages={6} damping={0.25}>
     <Scroll> 
-    <Model />
+    <Modelrc />
     <Sparkles noise={0} count={500} speed={0.01} size={0.6} color={"#FFD2BE"} opacity={10} scale={[20,100,20]}></Sparkles>
     <Sparkles noise={0} count={50} speed={0.01} size={10} color={"#FFF"} opacity={2} scale={[30,100,10]} ></Sparkles>
     </Scroll>
@@ -40,7 +43,7 @@ function App() {
   <SectionSix/>
           </Container>        
     </Scroll>
-   </ScrollControls>
+   </ScrollControls>   
    </>
   );
 }
