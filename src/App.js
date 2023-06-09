@@ -1,5 +1,5 @@
 import './App.css';
-import {ScrollControls, Scroll, Sparkles} from "@react-three/drei"
+import {ScrollControls, Scroll, Sparkles, Stars} from "@react-three/drei"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import { SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix } from './components';
@@ -8,10 +8,8 @@ import { Modelv4 } from './models/modelv4';
 
 function App() {   
   return (
-   <> 
-   
- 
-   <color attach="background" args={['#0F2C43']}/>
+   <>  
+   <color attach="background" args={['#081a29']}/>
    <ambientLight intensity={0.3} />
 <directionalLight
   castShadow
@@ -29,8 +27,8 @@ function App() {
 <pointLight position={[0, -10, 0]} intensity={2} />
 <pointLight position={[-1, 0, 0]} color="white" intensity={1} />
 <pointLight position={[15, 0, 0]} color="white" intensity={1} />
-
-   <ScrollControls pages={6} damping={0.25}>
+<Stars radius={100} depth={50} count={2000} factor={4} saturation={50} fade />
+   <ScrollControls pages={5.4} damping={0.25}>
     <Scroll> 
     <Modelv4 />
     <Sparkles noise={0} count={500} speed={0.01} size={0.6} color={"#FFD2BE"} opacity={10} scale={[20,100,20]}></Sparkles>
