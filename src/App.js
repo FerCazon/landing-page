@@ -5,7 +5,6 @@ import Container from 'react-bootstrap/Container';
 import { SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix } from './components';
 import { Modelv4 } from './models/modelv4';
 
-
 function App() {   
   return (
    <>  
@@ -27,7 +26,8 @@ function App() {
 <pointLight position={[0, -10, 0]} intensity={2} />
 <pointLight position={[-1, 0, 0]} color="white" intensity={1} />
 <pointLight position={[15, 0, 0]} color="white" intensity={1} />
-<Stars radius={100} depth={50} count={2000} factor={4} saturation={50} fade />
+<Stars radius={100} d
+epth={50} count={4000} factor={4} saturation={50} fade />
    <ScrollControls pages={5.4} damping={0.25}>
     <Scroll> 
     <Modelv4 />
