@@ -2,8 +2,6 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import audioFile from '../audio/Welcome.m4a'
-import {  Mesh } from "three";
-import { useEffect } from "react";
 
 export function Modelv4(props) {
     const gltf = useGLTF("/models/robotv4.gltf");
@@ -14,7 +12,7 @@ export function Modelv4(props) {
   
   useFrame(({ mouse }) => {
     if (groupRef && groupRef.current) {
-      const scaleFactor = 4;
+      const scaleFactor = 8;
       const [x, y] = [mouse.x / scaleFactor, mouse.y / scaleFactor]; 
       const maxXRotation = Math.PI 
       const minXRotation = -Math.PI 
