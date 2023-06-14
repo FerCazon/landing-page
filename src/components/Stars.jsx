@@ -7,7 +7,6 @@ const Stars = (props) => {
   const ref = useRef();
   const [sphere] = useState(() => random.inSphere(new Float32Array(15000), { radius: 6.0 }));
 
-  // Apply a radial distribution to make the center less dense
   for (let i = 0; i < sphere.length; i += 3) {
     const dx = sphere[i];
     const dy = sphere[i + 1];
@@ -21,20 +20,20 @@ const Stars = (props) => {
 
   useFrame(() => {
     for (let i = 0; i < sphere.length; i += 3) {
-      sphere[i + 2] -= 0.02; // Modify this value to adjust the speed of stars coming towards the camera
+      sphere[i + 2] -= 0.02; // velocidad
   
       if (sphere[i + 2] < -5) {
-        // When the star is beyond the camera, we randomize its position again
-        const theta = 2 * Math.PI * Math.random(); // Random value between 0 and 2*PI
-        const phi = Math.acos(2 * Math.random() - 1); // Random value between 0 and PI
-        const radius = 5.0 * Math.cbrt(Math.random()); // Random value between 0 and 5.0, cubic root distribution
         
-        // Convert spherical to Cartesian coordinates
+        const theta = 2 * Math.PI * Math.random(); 
+        const phi = Math.acos(2 * Math.random() - 1); 
+        const radius = 5.0 * Math.cbrt(Math.random());  
+        
+       
         sphere[i] = radius * Math.sin(phi) * Math.cos(theta); 
         sphere[i + 1] = radius * Math.sin(phi) * Math.sin(theta);
-        sphere[i + 2] = 5 + radius * Math.cos(phi); // Reset position to start behind the camera
+        sphere[i + 2] = 5 + radius * Math.cos(phi); // posicion
   
-        // Apply radial distribution again
+       
         const dx = sphere[i];
         const dy = sphere[i + 1];
         const dz = sphere[i + 2];
