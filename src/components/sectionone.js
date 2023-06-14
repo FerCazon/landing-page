@@ -1,5 +1,6 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import './styles.css'
 
 const SectionOne = () => (
   <Row 
@@ -8,7 +9,7 @@ const SectionOne = () => (
   >
     <Col xs={6}>
       <div>
-        <h1 style={{marginBottom: '0px'}}>WELCOME TO HOLOCRUXE</h1>
+      <h1 style={{marginBottom: '0px'}} className="non-selectable">WELCOME TO HOLOCRUXE</h1>
       </div>
     </Col>
   </Row>

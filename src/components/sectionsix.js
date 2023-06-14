@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from "react-bootstrap/Button"
+import './styles.css'
 
 const SectionSix = () => {
   const { ref, inView } = useInView({
@@ -27,7 +28,7 @@ const SectionSix = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="text-center"
         >
-          <h1 style={{marginBottom: '0px'}}>
+          <h1 style={{marginBottom: '0px'}}className="non-selectable">
             Holocruxe is an AI App designed to help people to capture, save and 
             share your most beloved experiences and memories. We are a professional 
             team passionate about tech and preservation of human life

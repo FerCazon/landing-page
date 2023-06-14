@@ -7,6 +7,7 @@ import EarthCanvas from '../models/Earth';
 import Stars from './Stars';
 import Lighting from './lightning';
 import { Canvas } from '@react-three/fiber';
+import './styles.css'
 
 
 
@@ -55,10 +56,11 @@ const SectionFive = () => {
     <Row
         ref={ref}
         className="d-flex align-items-center justify-content-center"
-        style={{ width: '100%', padding: '30px 30px', marginBottom: '350px' }}
+        style={{ width: '100%', padding: '30px 30px', marginBottom: '550px' }}
     >
         {/* 3D Canvas */}
         <div style={{ position: 'absolute', width: '100%', height: '100%' }}>
+          <h1 style={{ marginBottom: '0px', marginLeft: '310px'  }}className="non-selectable">To make a longlasting legacy for the future</h1>         
             <Canvas
                 shadows
                 dpr={[1, 2]}
@@ -72,7 +74,6 @@ const SectionFive = () => {
             </Canvas>
         </div>
     <Col xs={6} className="d-flex flex-column align-items-center">
-          <h1 style={{ marginBottom: '0px' }}>To make a longlasting legacy for the future</h1>         
       <motion.div
         variants={variants}
         initial="hidden"

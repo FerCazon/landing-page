@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { Row, Col } from 'react-bootstrap';
 import { useEffect, useRef } from 'react';
 import imgSrc from "../photos/photo4.jpeg";
+import './styles.css'
 
 const SectionFour = () => {
 
@@ -49,7 +50,7 @@ const SectionFour = () => {
     <Row
       ref={ref}
       className="d-flex align-items-center justify-content-center"
-      style={{ width: '100%', padding: '30px 30px', marginBottom: '350px' }}
+      style={{ width: '100%', padding: '30px 30px', marginBottom: '550px' }}
     >
       <Col xs={6} className="d-flex flex-column align-items-center">
         <motion.div
@@ -58,7 +59,7 @@ const SectionFour = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="text-center mb-3"
         >
-          <h1 style={{ marginBottom: '0px' }}>Live your life</h1>
+          <h1 style={{ marginBottom: '0px' }}className="non-selectable">Live your life</h1>
         </motion.div>
         <motion.img
           ref={imageRef}

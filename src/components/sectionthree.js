@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { Row, Col } from 'react-bootstrap';
 import { useEffect, useRef } from 'react';
 import imgSrc from '../photos/photo3.jpg'
+import './styles.css'
 
 const SectionThree = () => {
 
@@ -58,7 +59,7 @@ const SectionThree = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="text-center mb-3"
         >
-          <h1 style={{ marginBottom: '0px' }}>Along your most beloved memories</h1>
+          <h1 style={{ marginBottom: '0px' }} className="non-selectable">Along your most beloved memories</h1>
         </motion.div>
         <motion.img
           ref={imageRef}
