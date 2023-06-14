@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Stars from './components/Stars';
 import Lighting from './components/lightning';
 import ScrollControl from './components/scrollcontrols';
+import EarthCanvas from './models/Earth';
 
 function App() {   
   return (
@@ -14,6 +15,7 @@ function App() {
      <Lighting/>     
      <Stars />     
      <ScrollControl/>
+     <EarthCanvas/>
     </Canvas>
    </>
   );

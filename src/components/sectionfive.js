@@ -3,6 +3,12 @@ import { useInView } from 'react-intersection-observer';
 import { Row, Col } from 'react-bootstrap';
 import { useEffect, useRef } from 'react';
 import imgSrc from '../photos/photo5.jpg'
+import EarthCanvas from '../models/Earth';
+import Stars from './Stars';
+import Lighting from './lightning';
+import { Canvas } from '@react-three/fiber';
+
+
 
 const SectionFive = () => {
 
@@ -45,33 +51,38 @@ const SectionFive = () => {
     }
   }, [x, y, imageRef]);
 
-  return (
+  return (    
     <Row
-      ref={ref}
-      className="d-flex align-items-center justify-content-center"
-      style={{ width: '100%', padding: '30px 30px', marginBottom: '350px' }}
+        ref={ref}
+        className="d-flex align-items-center justify-content-center"
+        style={{ width: '100%', padding: '30px 30px', marginBottom: '350px' }}
     >
-      <Col xs={6} className="d-flex flex-column align-items-center">
-        <motion.div
-          variants={variants}
-          initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
-          className="text-center mb-3"
-        >
-          <h1 style={{ marginBottom: '0px' }}>To make a longlasting legacy for the future</h1>
-        </motion.div>
-        <motion.img
-          ref={imageRef}
-          variants={imageVariants}
-          initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
-          style={{ rotateX, rotateY }}
-          src={imgSrc}
-          alt="img"          
-        />
-      </Col>
-    </Row>
-  );
+        {/* 3D Canvas */}
+        <div style={{ position: 'absolute', width: '100%', height: '100%' }}>
+            <Canvas
+                shadows
+                dpr={[1, 2]}
+                gl={{ preserveDrawingBuffer: true }}
+                camera={{ fov: 45, near: 0.1, far: 200, position: [-4, 3, 6] }}
+            >
+                <color attach="background" args={['#081a29']} />
+                <Lighting />
+                <Stars />
+                <EarthCanvas />
+            </Canvas>
+        </div>
+    <Col xs={6} className="d-flex flex-column align-items-center">
+          <h1 style={{ marginBottom: '0px' }}>To make a longlasting legacy for the future</h1>         
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+        className="text-center mb-3"
+      >
+      </motion.div>        
+    </Col>
+  </Row>
+);
 };
 
 export default SectionFive;
